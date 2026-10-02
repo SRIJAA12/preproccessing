@@ -641,27 +641,15 @@ if not st.session_state.authenticated:
 
             st.markdown("<div style='border-top:1px solid #e2e8f0;margin:18px 0 14px;'></div>", unsafe_allow_html=True)
             st.markdown("<p style='font-size:0.8rem;color:#64748b;font-weight:600;margin-bottom:8px;'>⚡ ONE-CLICK DEMO ACCESS FOR EVALUATORS:</p>", unsafe_allow_html=True)
-            dem_c1, dem_c2 = st.columns(2)
-            with dem_c1:
-                if st.button("👤 Demo: RM Anandhan", use_container_width=True):
-                    st.session_state.authenticated = True
-                    st.session_state.current_user = {
-                        "Username": "anandhan",
-                        "Email": "anandhan@portfolio.in",
-                        "FullName": "R. Anandhan",
-                        "Role": "Relationship Manager"
-                    }
-                    st.rerun()
-            with dem_c2:
-                if st.button("👑 Demo: Admin Head", use_container_width=True):
-                    st.session_state.authenticated = True
-                    st.session_state.current_user = {
-                        "Username": "admin",
-                        "Email": "admin@portfolio.in",
-                        "FullName": "Portfolio Admin",
-                        "Role": "Branch Manager"
-                    }
-                    st.rerun()
+            if st.button("👤 One-Click Demo Login (RM Anandhan)", use_container_width=True):
+                st.session_state.authenticated = True
+                st.session_state.current_user = {
+                    "Username": "anandhan",
+                    "Email": "anandhan@portfolio.in",
+                    "FullName": "R. Anandhan",
+                    "Role": "Relationship Manager"
+                }
+                st.rerun()
 
         with auth_tab_signup:
             st.markdown("<p style='font-weight:600;color:#0f172a;'>Register as a Relationship Manager or Branch Officer</p>", unsafe_allow_html=True)
