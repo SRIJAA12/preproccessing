@@ -1,0 +1,26 @@
+Customer Name,Branch,Product,Outstanding (L),ROI,Trigger,Risk Level,RM Contact Status,Action Taken,Outcome,RM Comments,Portfolio Retained (L)
+Arun Kumar,Madurai,HL,38.0,10.25,Bureau Alert | Foreclosure Enquiry | Competitor Quote,High,Contacted,Rate Review,Retained,Reviewed competitor offer. Assessed ROI eligibility. Customer agreed to continue.,38.0
+Meena R,Sivakasi,HL,25.0,9.75,Own Fund Intent,High,Contacted,Own Fund Discussion,Partially Retained,Customer agreed to partial prepayment of ₹5L after liquidity discussion.,15.0
+Suresh P,Chennai,HL,32.0,9.50,Service Complaint,Medium,Contacted,Service Resolution,Retained,Documentation issue escalated and resolved. Customer satisfied.,32.0
+Kavitha S,Coimbatore,NHL,18.5,11.00,Rate Reduction Request,Medium,Not Contacted,,Follow-up,,0.0
+Rajesh T,Madurai,HL,42.0,10.75,Foreclosure Enquiry | Bureau Alert,High,Not Contacted,,Follow-up,,0.0
+Priya M,Chennai,HL,29.0,10.00,Competitor Quote,High,Contacted,Competitor Quote Review,Retained,Explained additional benefits. Customer decided to stay.,29.0
+Karthik V,Trichy,NHL,15.0,11.50,Rate Reduction Request,Medium,Not Contacted,,Follow-up,,0.0
+Lakshmi N,Salem,HL,33.0,9.80,Outstanding Amount Check,Low,Not Contacted,,Follow-up,,0.0
+Senthil A,Madurai,HL,45.0,10.50,Bureau Alert | Competitor Quote,High,Contacted,Rate Review,Follow-up,Rate review in progress. Awaiting credit approval.,0.0
+Divya R,Sivakasi,NHL,12.0,12.00,Service Complaint,Medium,Contacted,Service Resolution,Retained,Callback resolved service concern.,12.0
+Murugan K,Coimbatore,HL,55.0,10.25,Foreclosure Enquiry,High,Contacted,Follow-up Required,Follow-up,Customer requested more time to decide.,0.0
+Anitha P,Chennai,HL,22.0,9.90,Own Fund Intent,High,Not Contacted,,Follow-up,,0.0
+Vijay S,Trichy,HL,36.0,10.75,Competitor Quote | Rate Reduction Request,High,Contacted,Rate Review,Retained,Offered rate review and top-up option.,36.0
+Saranya M,Salem,NHL,8.5,12.50,Top-Up Requirement,Low,Not Contacted,,Follow-up,,0.0
+Balaji R,Madurai,HL,60.0,10.00,Bureau Alert | Foreclosure Enquiry,High,Contacted,Rate Review,Retained,Rate reviewed. Customer retained.,60.0
+Nithya K,Chennai,HL,27.0,10.25,Rate Reduction Request,Medium,Not Contacted,,Follow-up,,0.0
+Rajan P,Sivakasi,HL,19.0,11.00,Service Complaint,Medium,Contacted,Service Resolution,Retained,TAT escalation resolved.,19.0
+Geetha V,Coimbatore,NHL,14.0,12.00,Own Fund Intent,High,Not Contacted,,Follow-up,,0.0
+Prakash T,Trichy,HL,48.0,9.75,Competitor Quote | Bureau Alert,High,Contacted,Competitor Quote Review,Partially Retained,Customer partially prepaid. Remaining balance retained.,10.0
+Sumitha A,Salem,HL,31.0,10.50,Outstanding Amount Check,Low,Not Contacted,,Follow-up,,0.0
+Vignesh R,Chennai,HL,52.0,10.00,Foreclosure Enquiry | Rate Reduction Request,High,Contacted,Rate Review,Follow-up,Rate review submitted. Decision pending.,0.0
+Padma S,Madurai,NHL,9.0,11.75,Top-Up Requirement,Low,Not Contacted,,Follow-up,,0.0
+Moorthy K,Sivakasi,HL,37.0,10.25,Bureau Alert,Medium,Contacted,Follow-up Required,Follow-up,Bureau alert reviewed. RM to call again.,0.0
+Janaki R,Coimbatore,HL,23.0,9.80,Competitor Quote,High,Not Contacted,,Follow-up,,0.0
+Deepak V,Trichy,NHL,16.0,11.25,Rate Reduction Request,Medium,Not Contacted,,Follow-up,,0.0
