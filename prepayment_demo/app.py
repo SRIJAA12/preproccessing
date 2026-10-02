@@ -921,55 +921,62 @@ with st.sidebar:
             help="Download standard CSV structure with contact details and 90-day status columns."
         )
 
-    # 2. File Uploader
+    # 2. File Uploader & Confirmation Button
     uploaded_file = st.file_uploader(
         "Upload Customer CSV",
         type=["csv"],
-        help="Upload new customer records to dynamically populate all screens and dashboards.",
+        help="Choose a CSV file, then click 'Upload & Confirm Dataset' to load it.",
         key="sb_customer_uploader"
     )
     if uploaded_file is not None:
-        try:
-            up_df = pd.read_csv(uploaded_file)
-            up_df.columns = up_df.columns.str.strip()
-            # Validate core columns
-            req = ["Customer Name", "Branch", "Product", "Outstanding (L)", "ROI", "Risk Level"]
-            missing = [c for c in req if c not in up_df.columns]
-            if not missing:
-                up_df["Outstanding (L)"] = pd.to_numeric(up_df["Outstanding (L)"], errors="coerce").fillna(0)
-                up_df["ROI"] = pd.to_numeric(up_df["ROI"], errors="coerce").fillna(10.0)
-                if "Portfolio Retained (L)" not in up_df.columns:
-                    up_df["Portfolio Retained (L)"] = 0.0
+        if st.button("📤 Upload & Confirm Dataset", key="btn_confirm_upload", use_container_width=True):
+            try:
+                up_df = pd.read_csv(uploaded_file)
+                up_df.columns = up_df.columns.str.strip()
+                # Validate core columns
+                req = ["Customer Name", "Branch", "Product", "Outstanding (L)", "ROI", "Risk Level"]
+                missing = [c for c in req if c not in up_df.columns]
+                if not missing:
+                    up_df["Outstanding (L)"] = pd.to_numeric(up_df["Outstanding (L)"], errors="coerce").fillna(0)
+                    up_df["ROI"] = pd.to_numeric(up_df["ROI"], errors="coerce").fillna(10.0)
+                    if "Portfolio Retained (L)" not in up_df.columns:
+                        up_df["Portfolio Retained (L)"] = 0.0
+                    else:
+                        up_df["Portfolio Retained (L)"] = pd.to_numeric(up_df["Portfolio Retained (L)"], errors="coerce").fillna(0)
+
+                    # Default fallback values for newly uploaded data
+                    if "Phone Number" not in up_df.columns:
+                        up_df["Phone Number"] = [f"+91 98400 {10000+i}" for i in range(len(up_df))]
+                    if "Email ID" not in up_df.columns:
+                        up_df["Email ID"] = up_df["Customer Name"].str.lower().str.replace(" ", ".") + "@example.com"
+                    if "Loan Account No" not in up_df.columns:
+                        up_df["Loan Account No"] = "LN-" + up_df["Branch"].astype(str) + "-2024-" + up_df.index.astype(str).str.zfill(3)
+                    if "Assigned RM" not in up_df.columns:
+                        up_df["Assigned RM"] = current_user.get("FullName", "R. Anandhan")
+                    if "Last Contact Date" not in up_df.columns:
+                        up_df["Last Contact Date"] = "2026-08-01"
+                    if "Next Check-in Due" not in up_df.columns:
+                        up_df["Next Check-in Due"] = "2026-11-01"
+                    if "Check-in Status" not in up_df.columns:
+                        up_df["Check-in Status"] = "Due Soon"
+
+                    st.session_state.customer_df = up_df
+                    st.session_state.customer_actions = {}
+                    st.session_state.upload_success_message = f"✅ '{uploaded_file.name}' confirmed & loaded successfully ({len(up_df)} customer records active)!"
+                    st.rerun()
                 else:
-                    up_df["Portfolio Retained (L)"] = pd.to_numeric(up_df["Portfolio Retained (L)"], errors="coerce").fillna(0)
+                    st.sidebar.error(f"Missing required columns: {', '.join(missing)}")
+            except Exception as e:
+                st.sidebar.error(f"Upload error: {e}")
 
-                # Default fallback values for newly uploaded data
-                if "Phone Number" not in up_df.columns:
-                    up_df["Phone Number"] = [f"+91 98400 {10000+i}" for i in range(len(up_df))]
-                if "Email ID" not in up_df.columns:
-                    up_df["Email ID"] = up_df["Customer Name"].str.lower().str.replace(" ", ".") + "@example.com"
-                if "Loan Account No" not in up_df.columns:
-                    up_df["Loan Account No"] = "LN-" + up_df["Branch"].astype(str) + "-2024-" + up_df.index.astype(str).str.zfill(3)
-                if "Assigned RM" not in up_df.columns:
-                    up_df["Assigned RM"] = current_user.get("FullName", "R. Anandhan")
-                if "Last Contact Date" not in up_df.columns:
-                    up_df["Last Contact Date"] = "2026-08-01"
-                if "Next Check-in Due" not in up_df.columns:
-                    up_df["Next Check-in Due"] = "2026-11-01"
-                if "Check-in Status" not in up_df.columns:
-                    up_df["Check-in Status"] = "Due Soon"
-
-                st.session_state.customer_df = up_df
-                st.sidebar.success(f"Loaded {len(up_df)} customers from {uploaded_file.name}!")
-            else:
-                st.sidebar.error(f"Missing required columns: {', '.join(missing)}")
-        except Exception as e:
-            st.sidebar.error(f"Upload error: {e}")
+    if st.session_state.get("upload_success_message"):
+        st.sidebar.success(st.session_state.upload_success_message)
 
     # 3. Reset Button
     if st.button("🔄 Reset to Default Data", use_container_width=True):
         st.session_state.customer_df = None
         st.session_state.customer_actions = {}
+        st.session_state.upload_success_message = None
         st.rerun()
 
     st.markdown("<div style='border-top:1.5px solid #e2e8f0;margin:16px 0 14px;'></div>", unsafe_allow_html=True)
@@ -1207,12 +1214,17 @@ elif page == "🤝  Customer Retention":
       &#129309; Customer Retention Action &amp; Targeted Playbook</div>""", unsafe_allow_html=True)
 
     df = df_master.copy()
-    demo  = ["Arun Kumar","Meena R","Suresh P"]
-    other = [n for n in df["Customer Name"].tolist() if n not in demo]
+    all_names = [str(n).strip() for n in df["Customer Name"].dropna().unique() if str(n).strip()]
+    if not all_names:
+        st.warning("No customer records found in active dataset.")
+        st.stop()
+    demo  = [n for n in ["Arun Kumar","Meena R","Suresh P"] if n in all_names]
+    other = [n for n in all_names if n not in demo]
+    cust_options = demo + other
     
     sel_c1, sel_c2 = st.columns([2.5, 1])
     with sel_c1:
-        sel = st.selectbox("&#128100; Select Customer to Formulate Retention Strategy", demo + other)
+        sel = st.selectbox("👤 Select Customer to Formulate Retention Strategy", cust_options)
     with sel_c2:
         st.download_button(
             label="📥 Download Retention Actions (CSV)",
@@ -1222,7 +1234,11 @@ elif page == "🤝  Customer Retention":
             use_container_width=True
         )
 
-    row   = df[df["Customer Name"] == sel].iloc[0]
+    matching = df[df["Customer Name"] == sel]
+    if matching.empty:
+        st.warning(f"Customer '{sel}' not found in active dataset.")
+        st.stop()
+    row   = matching.iloc[0]
     saved = st.session_state.customer_actions.get(sel, {})
 
     # Customer Profile Card with Contact Information
@@ -1334,9 +1350,12 @@ elif page == "🤝  Customer Retention":
 
     # ── Own Funds ──
     elif cat == "Own Funds":
-        outstanding   = 25.0 if row["Customer Name"] == "Meena R" else row["Outstanding (L)"]
-        planned, paid = 20.0, 5.0
-        avoided = planned - paid
+        outstanding = float(row["Outstanding (L)"])
+        planned = round(outstanding * 0.8, 1)
+        paid = round(outstanding * 0.2, 1)
+        if row["Customer Name"] == "Meena R":
+            outstanding, planned, paid = 25.0, 20.0, 5.0
+        avoided = round(planned - paid, 1)
 
         t1, t2 = st.tabs(["&#128176; Prepayment Simulation", "&#9989; Action Checklist"])
         with t1:
@@ -1551,9 +1570,16 @@ elif page == "📞  RM 90-Day Health Checks":
 
         call_c1, call_c2 = st.columns([1.5, 2])
         with call_c1:
-            cust_list = df["Customer Name"].tolist()
+            cust_list = [str(n).strip() for n in df["Customer Name"].dropna().unique() if str(n).strip()]
+            if not cust_list:
+                st.info("No customers available in active dataset.")
+                st.stop()
             log_cust_name = st.selectbox("Select Customer to Call", cust_list, key="log_call_cust_sel")
-            cust_row = df[df["Customer Name"] == log_cust_name].iloc[0]
+            matching_cust = df[df["Customer Name"] == log_cust_name]
+            if matching_cust.empty:
+                st.warning("Customer record not found.")
+                st.stop()
+            cust_row = matching_cust.iloc[0]
 
             st.markdown(f"""
             <div style='background:#f8fafc;border:1.5px solid #cbd5e1;border-radius:12px;padding:16px;margin:10px 0;'>
