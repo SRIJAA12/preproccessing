@@ -183,17 +183,18 @@ h3 { color: #0f172a !important; font-size: 1.1rem !important; font-weight: 600 !
     gap: 8px;
 }
 
-/* ══ TAGLINE BOX ══ */
+/* ══ TAGLINE BOX — light card with bold dark text ══ */
 .tagline-box {
-    background: linear-gradient(135deg, #1e3a8a 0%, #0d9488 100%);
+    background: #f8fafc;
+    border: 2px solid #0d9488;
     border-radius: 16px;
-    padding: 24px 32px;
+    padding: 22px 30px;
     text-align: center;
     margin: 16px 0;
-    box-shadow: 0 4px 20px rgba(30,58,138,0.25);
+    box-shadow: 0 4px 18px rgba(13,148,136,0.10);
 }
-.tagline-tamil   { color: #ffffff; font-size: 1.65rem; font-weight: 800 !important; letter-spacing: 1px; }
-.tagline-english { color: rgba(255,255,255,0.75) !important; font-size: 0.95rem !important; margin-top: 6px; }
+.tagline-tamil   { color: #0f172a !important; font-size: 1.7rem; font-weight: 900 !important; letter-spacing: 0.5px; }
+.tagline-english { color: #0d9488 !important; font-size: 0.98rem !important; font-weight: 700 !important; margin-top: 6px; }
 
 /* ══ ALERT BANNERS ══ */
 .warn-banner {
@@ -381,18 +382,19 @@ h3 { color: #0f172a !important; font-size: 1.1rem !important; font-weight: 600 !
 }
 .insight-box p, .insight-box span, .insight-box b { color: #065f46 !important; }
 
-/* ══ CLOSING BANNER ══ */
+/* ══ CLOSING BANNER — light card with bold dark text ══ */
 .close-banner {
-    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #0d9488 100%);
+    background: #f8fafc;
+    border: 2px solid #1e3a8a;
     border-radius: 16px;
-    padding: 28px 36px;
+    padding: 26px 34px;
     text-align: center;
-    box-shadow: 0 6px 30px rgba(15,23,42,0.20);
+    box-shadow: 0 4px 20px rgba(30,58,138,0.08);
     margin-top: 16px;
 }
-.close-banner p { color: #e2e8f0 !important; }
-.close-banner .tamil { color: #5eead4 !important; font-size: 1.5rem !important; font-weight: 800 !important; }
-.close-banner .sub   { color: rgba(255,255,255,0.55) !important; font-size: 0.9rem !important; }
+.close-banner p { color: #334155 !important; font-size: 0.96rem !important; font-weight: 600 !important; }
+.close-banner .tamil { color: #0f172a !important; font-size: 1.55rem !important; font-weight: 900 !important; }
+.close-banner .sub   { color: #0d9488 !important; font-size: 0.92rem !important; font-weight: 700 !important; margin-top: 4px; }
 
 /* ══ STREAMLIT ELEMENTS ══ */
 .stSelectbox label { color: #0f172a !important; font-weight: 600 !important; font-size: 0.88rem !important; }
@@ -410,35 +412,63 @@ h3 { color: #0f172a !important; font-size: 1.1rem !important; font-weight: 600 !
 .stTextInput > div > div { background: #ffffff !important; border-radius: 10px !important; }
 textarea, input { background: #ffffff !important; color: #0f172a !important; }
 
+/* Action Buttons — light crisp background, bold dark text */
 .stButton > button {
-    background: linear-gradient(135deg, #1e3a8a, #2563eb) !important;
-    color: #ffffff !important;
-    border: none !important;
+    background: #f0f7ff !important;
+    color: #0f172a !important;
+    border: 2px solid #2563eb !important;
     border-radius: 10px !important;
-    font-weight: 600 !important;
+    font-weight: 800 !important;
     padding: 10px 24px !important;
-    font-size: 0.88rem !important;
-    box-shadow: 0 3px 12px rgba(37,99,235,0.25) !important;
+    font-size: 0.92rem !important;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.12) !important;
     transition: all 0.15s !important;
 }
+.stButton > button p,
+.stButton > button span,
+.stButton > button div {
+    color: #0f172a !important;
+    font-weight: 800 !important;
+    font-size: 0.92rem !important;
+}
 .stButton > button:hover {
+    background: #dbeafe !important;
+    border-color: #1d4ed8 !important;
     transform: translateY(-1px) !important;
-    box-shadow: 0 5px 18px rgba(37,99,235,0.35) !important;
+    box-shadow: 0 4px 14px rgba(37,99,235,0.20) !important;
+}
+.stButton > button:hover p,
+.stButton > button:hover span {
+    color: #1e3a8a !important;
 }
 
+/* Download Buttons — light mint/teal background, bold dark text */
 .stDownloadButton > button {
-    background: linear-gradient(135deg, #0d9488, #059669) !important;
-    color: #ffffff !important;
-    border: none !important;
+    background: #f0fdfa !important;
+    color: #065f46 !important;
+    border: 2px solid #0d9488 !important;
     border-radius: 10px !important;
-    font-weight: 600 !important;
+    font-weight: 800 !important;
     padding: 9px 20px !important;
-    font-size: 0.85rem !important;
-    box-shadow: 0 3px 12px rgba(13,148,136,0.25) !important;
+    font-size: 0.88rem !important;
+    box-shadow: 0 2px 8px rgba(13,148,136,0.12) !important;
+}
+.stDownloadButton > button p,
+.stDownloadButton > button span,
+.stDownloadButton > button div {
+    color: #065f46 !important;
+    font-weight: 800 !important;
+    font-size: 0.88rem !important;
 }
 .stDownloadButton > button:hover {
+    background: #ccfbf1 !important;
+    border-color: #0f766e !important;
     transform: translateY(-1px) !important;
-    box-shadow: 0 5px 18px rgba(13,148,136,0.35) !important;
+    box-shadow: 0 4px 14px rgba(13,148,136,0.20) !important;
+}
+.stDownloadButton > button:hover p,
+.stDownloadButton > button:hover span {
+    color: #047857 !important;
 }
 
 .stTabs [data-baseweb="tab"] {
@@ -969,14 +999,14 @@ with st.sidebar:
 
     st.markdown("<div style='border-top:1.5px solid #e2e8f0;margin:16px 0 14px;'></div>", unsafe_allow_html=True)
 
-    # Tagline card
+    # Tagline card — light box with bold dark text
     st.markdown("""
-    <div style='background:linear-gradient(135deg,#1e3a8a,#0d9488);
-                border-radius:12px;padding:14px;text-align:center;'>
-      <div style='font-size:1.05rem;font-weight:800;color:#ffffff !important;letter-spacing:1px;margin-bottom:3px;'>
+    <div style='background:#f0fdfa;border:2px solid #5eead4;
+                border-radius:12px;padding:14px;text-align:center;box-shadow:0 2px 8px rgba(13,148,136,0.08);'>
+      <div style='font-size:1.08rem;font-weight:900;color:#0f172a !important;letter-spacing:0.5px;margin-bottom:3px;'>
         &#2997;&#2992;&#3009;&#2990;&#3021;&#2990;&#3009;&#2985;&#3021; &#2965;&#3006;&#2986;&#3021;&#2986;&#3019;&#2990;&#3021;
       </div>
-      <div style='font-size:0.75rem;color:rgba(255,255,255,0.78) !important;font-style:italic;'>
+      <div style='font-size:0.78rem;color:#0d9488 !important;font-weight:700;'>
         Prevention is better than cure
       </div>
     </div>
