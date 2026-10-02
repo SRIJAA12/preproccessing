@@ -1,0 +1,3 @@
+Customer Name,Phone Number,Email ID,Loan Account No,Branch,Product,Outstanding (L),ROI,Trigger,Risk Level,RM Contact Status,Action Taken,Outcome,RM Comments,Portfolio Retained (L),Assigned RM,Last Contact Date,Next Check-in Due,Check-in Status
+Example Borrower 1,+91 98400 00001,borrower1@example.com,LN-CHN-2024-001,Chennai,HL,35.0,9.75,Competitor Quote | Rate Reduction Request,High,Not Contacted,,Follow-up,,0.0,R. Anandhan,2026-07-01,2026-10-01,Due Today
+Example Borrower 2,+91 98400 00002,borrower2@example.com,LN-MDU-2024-002,Madurai,NHL,20.0,11.20,Service Complaint,Medium,Contacted,Service Resolution,Retained,Service grievance addressed,20.0,S. Priya,2026-08-15,2026-11-15,Up to date

@@ -1,26 +1,26 @@
-Customer Name,Branch,Product,Outstanding (L),ROI,Trigger,Risk Level,RM Contact Status,Action Taken,Outcome,RM Comments,Portfolio Retained (L)
-Arun Kumar,Madurai,HL,38.0,10.25,Bureau Alert | Foreclosure Enquiry | Competitor Quote,High,Contacted,Rate Review,Retained,Reviewed competitor offer. Assessed ROI eligibility. Customer agreed to continue.,38.0
-Meena R,Sivakasi,HL,25.0,9.75,Own Fund Intent,High,Contacted,Own Fund Discussion,Partially Retained,Customer agreed to partial prepayment of ₹5L after liquidity discussion.,15.0
-Suresh P,Chennai,HL,32.0,9.50,Service Complaint,Medium,Contacted,Service Resolution,Retained,Documentation issue escalated and resolved. Customer satisfied.,32.0
-Kavitha S,Coimbatore,NHL,18.5,11.00,Rate Reduction Request,Medium,Not Contacted,,Follow-up,,0.0
-Rajesh T,Madurai,HL,42.0,10.75,Foreclosure Enquiry | Bureau Alert,High,Not Contacted,,Follow-up,,0.0
-Priya M,Chennai,HL,29.0,10.00,Competitor Quote,High,Contacted,Competitor Quote Review,Retained,Explained additional benefits. Customer decided to stay.,29.0
-Karthik V,Trichy,NHL,15.0,11.50,Rate Reduction Request,Medium,Not Contacted,,Follow-up,,0.0
-Lakshmi N,Salem,HL,33.0,9.80,Outstanding Amount Check,Low,Not Contacted,,Follow-up,,0.0
-Senthil A,Madurai,HL,45.0,10.50,Bureau Alert | Competitor Quote,High,Contacted,Rate Review,Follow-up,Rate review in progress. Awaiting credit approval.,0.0
-Divya R,Sivakasi,NHL,12.0,12.00,Service Complaint,Medium,Contacted,Service Resolution,Retained,Callback resolved service concern.,12.0
-Murugan K,Coimbatore,HL,55.0,10.25,Foreclosure Enquiry,High,Contacted,Follow-up Required,Follow-up,Customer requested more time to decide.,0.0
-Anitha P,Chennai,HL,22.0,9.90,Own Fund Intent,High,Not Contacted,,Follow-up,,0.0
-Vijay S,Trichy,HL,36.0,10.75,Competitor Quote | Rate Reduction Request,High,Contacted,Rate Review,Retained,Offered rate review and top-up option.,36.0
-Saranya M,Salem,NHL,8.5,12.50,Top-Up Requirement,Low,Not Contacted,,Follow-up,,0.0
-Balaji R,Madurai,HL,60.0,10.00,Bureau Alert | Foreclosure Enquiry,High,Contacted,Rate Review,Retained,Rate reviewed. Customer retained.,60.0
-Nithya K,Chennai,HL,27.0,10.25,Rate Reduction Request,Medium,Not Contacted,,Follow-up,,0.0
-Rajan P,Sivakasi,HL,19.0,11.00,Service Complaint,Medium,Contacted,Service Resolution,Retained,TAT escalation resolved.,19.0
-Geetha V,Coimbatore,NHL,14.0,12.00,Own Fund Intent,High,Not Contacted,,Follow-up,,0.0
-Prakash T,Trichy,HL,48.0,9.75,Competitor Quote | Bureau Alert,High,Contacted,Competitor Quote Review,Partially Retained,Customer partially prepaid. Remaining balance retained.,10.0
-Sumitha A,Salem,HL,31.0,10.50,Outstanding Amount Check,Low,Not Contacted,,Follow-up,,0.0
-Vignesh R,Chennai,HL,52.0,10.00,Foreclosure Enquiry | Rate Reduction Request,High,Contacted,Rate Review,Follow-up,Rate review submitted. Decision pending.,0.0
-Padma S,Madurai,NHL,9.0,11.75,Top-Up Requirement,Low,Not Contacted,,Follow-up,,0.0
-Moorthy K,Sivakasi,HL,37.0,10.25,Bureau Alert,Medium,Contacted,Follow-up Required,Follow-up,Bureau alert reviewed. RM to call again.,0.0
-Janaki R,Coimbatore,HL,23.0,9.80,Competitor Quote,High,Not Contacted,,Follow-up,,0.0
-Deepak V,Trichy,NHL,16.0,11.25,Rate Reduction Request,Medium,Not Contacted,,Follow-up,,0.0
+Customer Name,Phone Number,Email ID,Loan Account No,Branch,Product,Outstanding (L),ROI,Trigger,Risk Level,RM Contact Status,Action Taken,Outcome,RM Comments,Portfolio Retained (L),Assigned RM,Last Contact Date,Next Check-in Due,Check-in Status
+Arun Kumar,+91 98401 23456,arun.kumar@gmail.com,LN-MDU-2024-101,Madurai,HL,38.0,10.25,Bureau Alert | Foreclosure Enquiry | Competitor Quote,High,Contacted,Rate Review,Retained,Reviewed competitor offer. Assessed ROI eligibility. Customer agreed to continue.,38.0,R. Anandhan,2026-09-12,2026-12-12,Up to date
+Meena R,+91 94432 87654,meena.r@yahoo.co.in,LN-SVK-2023-205,Sivakasi,HL,25.0,9.75,Own Fund Intent,High,Contacted,Own Fund Discussion,Partially Retained,Customer agreed to partial prepayment of ₹5L after liquidity discussion.,15.0,R. Anandhan,2026-08-15,2026-11-15,Up to date
+Suresh P,+91 98840 91234,suresh.p@outlook.com,LN-CHN-2022-308,Chennai,HL,32.0,9.50,Service Complaint,Medium,Contacted,Service Resolution,Retained,Documentation issue escalated and resolved. Customer satisfied.,32.0,K. Rajesh,2026-07-02,2026-10-02,Due Today
+Kavitha S,+91 97900 11223,kavitha.s@gmail.com,LN-CBE-2023-412,Coimbatore,NHL,18.5,11.00,Rate Reduction Request,Medium,Not Contacted,,Follow-up,,0.0,S. Priya,2026-06-10,2026-09-10,Overdue
+Rajesh T,+91 98421 55667,rajesh.t@gmail.com,LN-MDU-2024-515,Madurai,HL,42.0,10.75,Foreclosure Enquiry | Bureau Alert,High,Not Contacted,,Follow-up,,0.0,R. Anandhan,2026-05-20,2026-08-20,Overdue
+Priya M,+91 99401 77889,priya.m@rediffmail.com,LN-CHN-2023-620,Chennai,HL,29.0,10.00,Competitor Quote,High,Contacted,Competitor Quote Review,Retained,Explained additional benefits. Customer decided to stay.,29.0,K. Rajesh,2026-09-01,2026-12-01,Up to date
+Karthik V,+91 96000 33445,karthik.v@gmail.com,LN-TRY-2024-722,Trichy,NHL,15.0,11.50,Rate Reduction Request,Medium,Not Contacted,,Follow-up,,0.0,S. Priya,2026-06-18,2026-09-18,Overdue
+Lakshmi N,+91 94440 22331,lakshmi.n@gmail.com,LN-SLM-2022-830,Salem,HL,33.0,9.80,Outstanding Amount Check,Low,Not Contacted,,Follow-up,,0.0,K. Rajesh,2026-08-25,2026-11-25,Up to date
+Senthil A,+91 98412 88990,senthil.a@yahoo.com,LN-MDU-2023-935,Madurai,HL,45.0,10.50,Bureau Alert | Competitor Quote,High,Contacted,Rate Review,Follow-up,Rate review in progress. Awaiting credit approval.,0.0,R. Anandhan,2026-09-18,2026-12-18,Up to date
+Divya R,+91 97890 44556,divya.r@gmail.com,LN-SVK-2024-041,Sivakasi,NHL,12.0,12.00,Service Complaint,Medium,Contacted,Service Resolution,Retained,Callback resolved service concern.,12.0,R. Anandhan,2026-07-28,2026-10-28,Upcoming
+Murugan K,+91 98403 66778,murugan.k@gmail.com,LN-CBE-2022-152,Coimbatore,HL,55.0,10.25,Foreclosure Enquiry,High,Contacted,Follow-up Required,Follow-up,Customer requested more time to decide.,0.0,S. Priya,2026-09-10,2026-12-10,Up to date
+Anitha P,+91 99620 12345,anitha.p@hotmail.com,LN-CHN-2024-263,Chennai,HL,22.0,9.90,Own Fund Intent,High,Not Contacted,,Follow-up,,0.0,K. Rajesh,2026-06-25,2026-09-25,Overdue
+Vijay S,+91 98430 98765,vijay.s@gmail.com,LN-TRY-2023-374,Trichy,HL,36.0,10.75,Competitor Quote | Rate Reduction Request,High,Contacted,Rate Review,Retained,Offered rate review and top-up option.,36.0,S. Priya,2026-08-30,2026-11-30,Up to date
+Saranya M,+91 97910 87654,saranya.m@gmail.com,LN-SLM-2024-485,Salem,NHL,8.5,12.50,Top-Up Requirement,Low,Not Contacted,,Follow-up,,0.0,K. Rajesh,2026-07-14,2026-10-14,Due Soon
+Balaji R,+91 94421 23456,balaji.r@gmail.com,LN-MDU-2021-596,Madurai,HL,60.0,10.00,Bureau Alert | Foreclosure Enquiry,High,Contacted,Rate Review,Retained,Rate reviewed. Customer retained.,60.0,R. Anandhan,2026-09-05,2026-12-05,Up to date
+Nithya K,+91 98845 67890,nithya.k@yahoo.co.in,LN-CHN-2023-607,Chennai,HL,27.0,10.25,Rate Reduction Request,Medium,Not Contacted,,Follow-up,,0.0,K. Rajesh,2026-06-15,2026-09-15,Overdue
+Rajan P,+91 94435 78901,rajan.p@gmail.com,LN-SVK-2024-718,Sivakasi,HL,19.0,11.00,Service Complaint,Medium,Contacted,Service Resolution,Retained,TAT escalation resolved.,19.0,R. Anandhan,2026-08-12,2026-11-12,Up to date
+Geetha V,+91 97870 54321,geetha.v@gmail.com,LN-CBE-2023-829,Coimbatore,NHL,14.0,12.00,Own Fund Intent,High,Not Contacted,,Follow-up,,0.0,S. Priya,2026-05-28,2026-08-28,Overdue
+Prakash T,+91 98407 65432,prakash.t@gmail.com,LN-TRY-2022-930,Trichy,HL,48.0,9.75,Competitor Quote | Bureau Alert,High,Contacted,Competitor Quote Review,Partially Retained,Customer partially prepaid. Remaining balance retained.,10.0,S. Priya,2026-08-05,2026-11-05,Up to date
+Sumitha A,+91 94448 76543,sumitha.a@gmail.com,LN-SLM-2023-041,Salem,HL,31.0,10.50,Outstanding Amount Check,Low,Not Contacted,,Follow-up,,0.0,K. Rajesh,2026-07-22,2026-10-22,Due Soon
+Vignesh R,+91 99403 21098,vignesh.r@gmail.com,LN-CHN-2022-152,Chennai,HL,52.0,10.00,Foreclosure Enquiry | Rate Reduction Request,High,Contacted,Rate Review,Follow-up,Rate review submitted. Decision pending.,0.0,K. Rajesh,2026-09-15,2026-12-15,Up to date
+Padma S,+91 94425 43210,padma.s@gmail.com,LN-MDU-2024-263,Madurai,NHL,9.0,11.75,Top-Up Requirement,Low,Not Contacted,,Follow-up,,0.0,R. Anandhan,2026-08-18,2026-11-18,Up to date
+Moorthy K,+91 94431 34567,moorthy.k@gmail.com,LN-SVK-2023-374,Sivakasi,HL,37.0,10.25,Bureau Alert,Medium,Contacted,Follow-up Required,Follow-up,Bureau alert reviewed. RM to call again.,0.0,R. Anandhan,2026-09-08,2026-12-08,Up to date
+Janaki R,+91 97898 90123,janaki.r@gmail.com,LN-CBE-2024-485,Coimbatore,HL,23.0,9.80,Competitor Quote,High,Not Contacted,,Follow-up,,0.0,S. Priya,2026-06-05,2026-09-05,Overdue
+Deepak V,+91 98409 87654,deepak.v@gmail.com,LN-TRY-2023-596,Trichy,NHL,16.0,11.25,Rate Reduction Request,Medium,Not Contacted,,Follow-up,,0.0,S. Priya,2026-07-05,2026-10-05,Due Soon

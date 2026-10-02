@@ -1,0 +1,6 @@
+Interaction ID,Timestamp,Customer Name,Loan Account No,Branch,RM Name,Call Type,Customer Trouble / Feedback,Call Outcome,Next Check-in Date,RM Remarks
+LOG-001,2026-09-12 10:30,Arun Kumar,LN-MDU-2024-101,Madurai,R. Anandhan,Quarterly Health Check,High Interest Rate,Retained,2026-12-12,Discussed competitor BT offer; customer agreed to stay upon ROI assessment.
+LOG-002,2026-08-15 14:15,Meena R,LN-SVK-2023-205,Sivakasi,R. Anandhan,Quarterly Health Check,Own Fund Prepayment,Partially Retained,2026-11-15,Customer was planning full closure with agricultural income; persuaded to retain ₹15L.
+LOG-003,2026-07-02 11:00,Suresh P,LN-CHN-2022-308,Chennai,K. Rajesh,Periodic Touchpoint,Service / Documentation Trouble,Retained,2026-10-02,Customer upset over delayed interest certificate; generated and delivered within 2 hrs.
+LOG-004,2026-09-01 16:45,Priya M,LN-CHN-2023-620,Chennai,K. Rajesh,Quarterly Health Check,Competitor Offer,Retained,2026-12-01,Informed customer regarding top-up pre-approval and low processing charges; retained loan.
+LOG-005,2026-09-05 12:20,Balaji R,LN-MDU-2021-596,Madurai,R. Anandhan,Quarterly Health Check,High Interest Rate,Retained,2026-12-05,Conducted annual rate reset review; borrower satisfied with revised schedule.
